@@ -1,0 +1,19 @@
+{
+  "name": "frontend_web",
+  "version": "1.0.0",
+  "description": "![helpdesk 2](https://user-images.githubusercontent.com/13760714/36448293-23edf49a-1655-11e8-98ea-34d514db0e91.gif)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ithelpdesktracker/frontend_web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ithelpdesktracker/frontend_web/issues"
+  },
+  "homepage": "https://github.com/ithelpdesktracker/frontend_web#readme"
+}
