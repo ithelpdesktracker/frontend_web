@@ -12,6 +12,8 @@ $("#login").submit(function(event) {
         'Content-Type': 'application/json',
     }})
         .then(function(response) {
+            sessionStorage['token'] = response.data.token;
+            console.log(sessionStorage['token']);
             console.log(response);
         });
 });
