@@ -14,3 +14,7 @@
 #### Admin Dash Plus 
 ![admin dash plus](https://user-images.githubusercontent.com/13760714/37533220-9bb82f3e-2917-11e8-8425-1b32d9ad5537.gif)
 #
+
+#### Non Admin/Create Issue Landing Page
+![non admin-createissue](https://user-images.githubusercontent.com/13760714/37817543-75f1095c-2e4d-11e8-837d-76e2997f7fc4.gif)
+#
