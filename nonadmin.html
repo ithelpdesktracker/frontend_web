@@ -1,5 +1,6 @@
 <!Doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -19,198 +20,211 @@
 
 
 </head>
-<body class="sidebar-fixed header-fixed">
-<div class="page-wrapper">
-    <nav class="navbar page-header">
-      <!-- Button that moves the Side Menu on the Responsive Side(Mobile)-->
-        <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
-            <i class="fa fa-bars"></i>
-        </a>
+
+<body class="sidebar-fixed header-fixed" onload="auth();">
+    <div class="page-wrapper">
+        <nav class="navbar page-header">
+            <!-- Button that moves the Side Menu on the Responsive Side(Mobile)-->
+            <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+                <i class="fa fa-bars"></i>
+            </a>
 
 
-<!-- Button that moves the Side Menu-->
-        <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
-            <i class="fa fa-bars"></i>
-        </a>
+            <!-- Button that moves the Side Menu-->
+            <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+                <i class="fa fa-bars"></i>
+            </a>
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item d-md-down-none">
-                <a href="#">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-md-down-none">
+                    <a href="#">
 
-            </li>
-</ul>
-    </nav>
+                </li>
+            </ul>
+        </nav>
 
-<!-- Sidebar Settings -->
-    <div class="main-container">
-        <div class="sidebar">
-            <nav class="sidebar-nav">
-                <ul class="nav">
-                  <li class="nav-title">Non Admin Navigation</li>
+        <!-- Sidebar Settings -->
+        <div class="main-container">
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-title">Non Admin Navigation</li>
 
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active">
-                          <i class="fas fa-plus"></i> New Issue </i>
-                      </a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">
+                                <i class="fas fa-plus"></i> New Issue </i>
+                            </a>
+                        </li>
 
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link ">
-                          <i class="fas fa-address-card"></i> Issues </i>
-                      </a>
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link ">
+                                <i class="fas fa-address-card"></i> Issues </i>
+                            </a>
 
 
 
-                      <li class="nav-item ">
-                          <a href="#" class="nav-link ">
-                              <i class="fas fa-wrench"></i> Settings</i>
-                          </a>
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link ">
+                                    <i class="fas fa-wrench"></i> Settings</i>
+                                </a>
                             </li>
 
-                    <li class="nav-title">More</li>
+                            <li class="nav-title">More</li>
 
-                    <li class="nav-item ">
-                            <a href="#" class="nav-link">
-                                <i class="fa fa-lock"></i> Logout </i>
-                        </a>
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link" id="logout">
+                                    <i class="fa fa-lock"></i> Logout </i>
+                                </a>
 
 
-                        </ul>
+                    </ul>
                     </li>
-                </ul>
-            </nav>
-        </div>
+                    </ul>
+                </nav>
+            </div>
 
 
 
 
 
-<!-- Here goes the Create Issue-->
+            <!-- Here goes the Create Issue-->
 
 
-        <div class="content">
+            <div class="content">
 
-          <div class="limiter">
-            <div class="container-login100">
-              <div class="wrap-login100 p-t-500 p-b-90">
-                <form class="login100-form validate-form flex-sb flex-w">
-                  <span class="login100-form-title p-b-55">
-                    Open an issue:
-                  </span>
-          <!-- Input UCID w/autocomplete as Requested(Trello) -->
-                  <div class="wrap-input100 validate-input m-b-50" >
-                    <input class="input100" type="text" name="ucid" placeholder=" Customer UCID" autocomplete="on">
-                    <span class="focus-input100"></span>
-                  </div>
-          <!--End of Input UCID w/autocomplete as Requested(Trello) -->
-
-
-          <div class=" validate-input m-b-16" >
-          <span class="login100-form-title p-b-10">
-                    <h5 align="left">issue location:</h5>
-                  </span>
-
-          <!-- Select-MultiMenu 1 -->
-          <div class=" validate-input m-b-16" >
-          <label>Academic Building:</label>
-            <select name="choice" multiple class="form-control"  >
-              <option value="a">Campbell Hall</option>
-              <option value="b">Central Avenue Building</option>
-              <option value="c">Cullimore Hall</option>
-              <option value="d">Electrical and Computer Engineering Building</option>
-              <option value="e">Fenster Hall</option>
-              <option value="f">Faculty Memorial Hall</option>
-              <option value="g">Guttenberg Information Technologies Center</option>
-              <option value="h">Kupfrian Hall</option>
-              <option value="i">Microelectronics Center</option>
-              <option value="j">Mechanical Engineering Center</option>
-              <option value="k">School of Architecture</option>
-              <option value="l">Tiernan Hall</option>
-              <option value="m">Van Houten Library</option>
-              <option value="n">York Center for Environmental Engineering And Science</option>
-              <option value="o">Specht Building</option>
-          </select>
-          </div>
-          <!-- End of Select-MultiMenu 1 -->
-
-          <!-- Input Room -->
-          <div class="wrap-input100 validate-input m-b-16" data-validate = "room">
-          <input class="input100" type="text" name="room" placeholder="Room #" >
-          <span class="focus-input100"></span>
-          </div>
-          <!-- End of Input Room -->
+                <div class="limiter">
+                    <div class="container-login100">
+                        <div class="wrap-login100 p-t-500 p-b-90">
+                            <div class="alert alert-success collapse" role="alert" id="form-success">
+                                Issue created successfully.
+                            </div>
+                            <div class="alert alert-danger collapse" role="alert" id="form-failure">
+                                Error creating issue.
+                            </div>
+                            <form class="login100-form validate-form flex-sb flex-w" id="iss_creation">
+                                <span class="login100-form-title p-b-55">
+                                    Open an issue:
+                                </span>
+                                <!-- Input UCID w/autocomplete as Requested(Trello) -->
+                                <div class="wrap-input100 validate-input m-b-50">
+                                    <input class="input100" type="text" name="ucid" placeholder=" Customer UCID" autocomplete="on" id="cust_ucid">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <!--End of Input UCID w/autocomplete as Requested(Trello) -->
 
 
-          <!-- Select-MultiMenu 2 -->
-          <div class=" validate-input m-b-16" >
-          <label>Issue Type:</label>
-          <select  name="choice2" multiple class="form-control">
-            <option value="p">Classroom - Audio</option>
-            <option value="q">Classroom - Video</option>
-            <option value="r">Classroom - Delivery</option>
-            <option value="s">Classroom - Other</option>
-            <option value="t">Special Event</option>
-            <option value="u">Other</option>
-          </select>
+                                <div class=" validate-input m-b-16">
+                                    <span class="login100-form-title p-b-10">
+                                        <h5 align="left">issue location:</h5>
+                                    </span>
 
-          </div>
-          <!-- End of Select-MultiMenu 2 -->
+                                    <!-- Select-MultiMenu 1 -->
+                                    <div class=" validate-input m-b-16">
+                                        <label>Academic Building:</label>
+                                        <select name="choice" multiple class="form-control" id="building">
+                                            <option value="1">Kupfrian Hall</option>
+                                            <option value="2">GITC - Guttenberg Information Technologies Center</option>
+                                            <option value="3">Tiernan Hall</option>
+                                            <option value="4">Campus Center</option>
+                                            <option value="5">Weston Hall</option>
+                                            <option value="6">Central King Building</option>
+                                            <option value="7">Cullimore Hall</option>
+                                            <option value="8">Wellness and Event Center</option>
+                                            <option value="9">Electrical and Computer Engineering Building</option>
+                                            <option value="10">Fenster Hall</option>
+                                            <option value="11">Faculty Memorial Hall</option>
+                                            <option value="12">Microelectronics Center</option>
+                                            <option value="13">Mechanical Engineering Center</option>
+                                            <option value="14">Central Avenue Building</option>
+                                            <option value="15">Van Houten Library</option>
+                                            <option value="16">York Center for Environmental Engineering and Science</option>
+                                            <option value="17">Specht Building</option>
+                                            <option value="18">Campbell Hall</option>
+                                        </select>
+                                    </div>
+                                    <!-- End of Select-MultiMenu 1 -->
 
-
-          <!-- TextArea -->
-          <div class=" validate-input m-b-16" >
-          <label for="comment">Issue Description:</label>
-              <textarea class="form-control" name="txtarea" rows="5" cols="50" placeholder=""></textarea>
-          </div>
-          <!-- End of TextArea -->
-
-          <!-- Assign Techs -->
-          <div class=" validate-input m-b-16" >
-          <label>Assign a Tech:</label>
-          <select  name="choice3" multiple class="form-control">
-            <option value="v">John Cummings</option>
-            <option value="w">Jack Bauer</option>
-            <option value="x">Yoel Romero</option>
-            <option value="y">Joey Diaz</option>
-            <option value="z">Tommy Wright</option>
-            <option value="1">Moe Abdel</option>
-            <option value="2">Eddie Bravo</option>
-            <option value="3">Benny Chicas</option>
-            <option value="4">Luigi Fabrizio</option>
-            <option value="5">Tony Montana</option>
-            <option value="6">Son Goku</option>
-          </select>
-          </div>
-          <!-- End of Assign Techs -->
+                                    <!-- Input Room -->
+                                    <div class="wrap-input100 validate-input m-b-16" data-validate="room">
+                                        <input class="input100" type="text" name="room" placeholder="Room #" id="room">
+                                        <span class="focus-input100"></span>
+                                    </div>
+                                    <!-- End of Input Room -->
 
 
-
-          <!-- Submit Button -->
-                  <div class="container-login100-form-btn m-t-17">
-                    <button class="login100-form-btn">
-                      Submit
-                    </button>
-                  </div>
-          <!-- End of Submit Button -->
-                    </div>
-                  </div>
-                </form>
-              </div>
-
-
-
-
+                                    <!-- Select-MultiMenu 2 -->
+                                    <div class=" validate-input m-b-16">
+                                        <label>Issue Type:</label>
+                                        <select name="choice2" multiple class="form-control" id="iss_type">
+                                            <option value="ca">Classroom - Audio</option>
+                                            <option value="cv">Classroom - Video</option>
+                                            <option value="cd">Classroom - Delivery</option>
+                                            <option value="co">Classroom - Other</option>
+                                            <option value="se">Special Event</option>
+                                            <option value="o">Other</option>
+                                        </select>
 
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                    <!-- End of Select-MultiMenu 2 -->
 
-<script src="./vendor/jquery/jquery.min.js"></script>
-<script src="./vendor/popper.js/popper.min.js"></script>
-<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="./vendor/chart.js/chart.min.js"></script>
-<script src="./js/carbon.js"></script>
-<script src="./js/demo.js"></script>
+
+                                    <!-- TextArea -->
+                                    <div class=" validate-input m-b-16">
+                                        <label for="comment">Issue Description:</label>
+                                        <textarea id="iss_desc" class="form-control" name="txtarea" rows="5" cols="50" placeholder=""></textarea>
+                                    </div>
+                                    <!-- End of TextArea -->
+
+                                    <!-- Assign Techs -->
+                                    <div class=" validate-input m-b-16">
+                                        <label>Assign a Tech:</label>
+                                        <select name="choice3" multiple class="form-control" id="tech">
+                                            <option value="jic6">John Cummings</option>
+                                            <option value="jb2">Jack Bauer</option>
+                                            <option value="yr2">Yoel Romero</option>
+                                            <option value="jd3">Joey Diaz</option>
+                                            <option value="tw3">Tommy Wright</option>
+                                            <option value="ma1">Moe Abdel</option>
+                                            <option value="ed3">Eddie Bravo</option>
+                                            <option value="bc3">Benny Chicas</option>
+                                            <option value="lf5">Luigi Fabrizio</option>
+                                            <option value="tm3">Tony Montana</option>
+                                            <option value="sg2">Son Goku</option>
+                                        </select>
+                                    </div>
+                                    <!-- End of Assign Techs -->
+
+
+
+                                    <!-- Submit Button -->
+                                    <div class="container-login100-form-btn m-t-17">
+                                        <button class="login100-form-btn">
+                                            Submit
+                                        </button>
+                                    </div>
+                                    <!-- End of Submit Button -->
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/popper.js/popper.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./vendor/chart.js/chart.min.js"></script>
+    <script src="./js/carbon.js"></script>
+    <script src="./js/demo.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
