@@ -18,3 +18,6 @@
 #### Non Admin/Create Issue Landing Page
 ![non admin-createissue](https://user-images.githubusercontent.com/13760714/37817543-75f1095c-2e4d-11e8-837d-76e2997f7fc4.gif)
 #
+### Issue Page
+![issuepage](https://user-images.githubusercontent.com/13760714/38015219-18c91d24-3239-11e8-8ab1-e2380c5b176a.gif)
+#
