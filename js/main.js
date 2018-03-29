@@ -16,11 +16,11 @@ $("#login").submit(function(event) {
             console.log(sessionStorage['token']);
             console.log(response);
             console.log(sessionStorage['job_title']);
-            if(sessionStorage['job_title'] === "admin") {
+            /*if(sessionStorage['job_title'] === "admin") {
                 window.location.replace("adminplus.html");
-            } else {
+            } else {*/
                 window.location.replace("/newissue");
-            }
+            //}
         })
         .catch(function(error) {
             if (error.response.status === 401 ) {
