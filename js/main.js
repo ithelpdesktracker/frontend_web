@@ -54,6 +54,7 @@ $("#iss_creation").submit(function(event) {
             'Authorization': 'Bearer '+ sessionStorage['token'],
         }})
             .then(function(response) {
+                document.getElementById("iss_creation").reset();
                 $("#form-success").show();
                 $("html, body").animate({ scrollTop: 0 }, "slow");
                 setTimeout(function() { $("#form-success").hide(); }, 8000);
