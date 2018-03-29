@@ -19,7 +19,7 @@ $("#login").submit(function(event) {
             if(sessionStorage['job_title'] === "admin") {
                 window.location.replace("adminplus.html");
             } else {
-                window.location.replace("nonadmin.html");
+                window.location.replace("/newissue");
             }
         })
         .catch(function(error) {
@@ -70,13 +70,13 @@ $("#logout").click(function(event) {
     event.preventDefault();
     // Clear session variables
     sessionStorage.clear();
-    window.location.replace("index.html");
+    window.location.replace("/");
 });
 
 function auth(){
     if(!sessionStorage['token']) {
         sessionStorage.clear();
-        window.location.replace("index.html");
+        window.location.replace("/");
     } else {
         //loadTechs();
     }
