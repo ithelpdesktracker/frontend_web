@@ -83,15 +83,16 @@ function getIssues() {
 
     axios.get(url, {
     }, {
-        /*headers: {
+        headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + sessionStorage['token'],
-        }*/
+        }
         })
         .then(function (response) {
             console.log(response);
         })
         .catch(function (error) {
+            console.log(error);
         });
 }
 
