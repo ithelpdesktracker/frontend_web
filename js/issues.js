@@ -38,8 +38,8 @@ function initTable() {
                 editable: true,
                 colspan: 3,
                 align: 'center'
-            }],
-            [{
+            },
+            {
                 field: 'status',
                 title: 'Status',
                 sortable: true,
