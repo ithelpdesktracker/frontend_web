@@ -37,7 +37,13 @@ function initTable() {
                 title: 'Status',
                 sortable: true,
                 editable: {
-                    mode: 'inline'
+                    mode: 'inline',
+                    url: "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/updateIssue" + id,
+                    source: [{
+                        value: 'resolved', text: 'Resolved'
+                    }, {
+                        value: 'unresolved', text: 'Unresolved'
+                    }],
                 },
                 align: 'center'
             }, {
@@ -79,6 +85,9 @@ function initTable() {
     });
     $table.on('all.bs.table', function (e, name, args) {
         console.log(name, args);
+    });
+    $table.on('editable-save.bs.table', function(field, row, oldValue, $el) {
+        console.log(field, row, oldValue, $el);
     });
     $remove.click(function () {
         var ids = getIdSelections();
