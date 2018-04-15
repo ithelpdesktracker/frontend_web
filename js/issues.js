@@ -86,9 +86,8 @@ function initTable() {
         console.log(name, args);
     });
     $table.on('editable-save.bs.table', function(field, row, oldValue, $el) {
-        console.log(field);
-        console.log($el);
-        console.log($el.iss_id);
+        console.log('field:' .field, 'row:' .row, 'oldvalue: ' .oldValue, '$el: ' .$el);
+
         var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue'+ $el.iss_id;
         axios.post(url, {
             status: row.status
