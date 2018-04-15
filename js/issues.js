@@ -87,7 +87,7 @@ function initTable() {
     });
     $table.on('editable-save.bs.table', function(field, row, oldValue, $el) {
         //console.log(field, row, oldValue, $el);
-        console.log(field);
+        console.log($el);
 
         var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue'+ row.iss_id;
         axios.post(url, {
