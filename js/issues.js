@@ -38,7 +38,6 @@ function initTable() {
                 sortable: true,
                 editable: {
                     mode: 'inline',
-                    url: "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/updateIssue" + id,
                     source: [{
                         value: 'resolved', text: 'Resolved'
                     }, {
