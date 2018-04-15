@@ -20,39 +20,36 @@ function initTable() {
                 title: 'Assigned Tech',
                 field: 'tech_ucid',
                 sortable: true,
-                editable: true,
                 align: 'center',
             }, {
                 field: 'building_id',
                 title: 'Building ID',
                 align: 'center',
                 sortable: true,
-                editable: true,
             }, {
                 title: 'Issue Type',
                 field: 'iss_type',
                 sortable: true,
-                editable: true,
                 align: 'center'
             },
             {
                 field: 'status',
                 title: 'Status',
                 sortable: true,
-                editable: true,
+                editable: {
+                    mode: 'inline'
+                },
                 align: 'center'
             }, {
                 field: 'room_num',
                 title: 'Room #',
                 sortable: true,
                 align: 'center',
-                editable: true,
             }, {
                 field: 'cust_ucid',
                 title: 'Customer UCID',
                 align: 'center',
                 sortable: true,
-                editable: true
             }, {
                 field: 'iss_description',
                 title: 'Issue Description',
