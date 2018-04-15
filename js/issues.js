@@ -85,13 +85,11 @@ function initTable() {
     $table.on('all.bs.table', function (e, name, args) {
         console.log(name, args);
     });
-    $table.on('editable-save.bs.table', function(field, row, oldValue, $el) {
-        //console.log(field, row, oldValue, $el);
-        console.log($el);
+    $table.on('editable-save.bs.table', function(field, row, newvalue, oldvalue) {
 
-        var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue'+ row.iss_id;
+        var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue'+ newvalue.iss_id;
         axios.post(url, {
-            status: row.status
+            status: newvalue.status
         }, {
             headers: {
                 'Content-Type': 'application/json',
