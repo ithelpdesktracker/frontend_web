@@ -62,7 +62,7 @@ function initTable() {
     });
     // sometimes footer render error.
     setTimeout(function () {
-        $table.bootstrapTable('load');
+        $table.bootstrapTable('getData');
     }, 1000);
     $table.on('check.bs.table uncheck.bs.table ' +
         'check-all.bs.table uncheck-all.bs.table',
