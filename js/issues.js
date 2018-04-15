@@ -167,9 +167,9 @@ function getHeight() {
 $(function () {
     var scripts = [
             location.search.substring(1) || '/js/bootstrap-table.js',
-            '/assets/bootstrap-table/src/extensions/export/bootstrap-table-export.js',
+            '/assets/src/extensions/export/bootstrap-table-export.js',
             'http://rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js',
-            '/assets/bootstrap-table/src/extensions/editable/bootstrap-table-editable.js',
+            '/assets/src/extensions/editable/bootstrap-table-editable.js',
             'http://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/js/bootstrap-editable.js'
         ],
         eachSeries = function (arr, iterator, callback) {
