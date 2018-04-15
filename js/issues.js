@@ -9,15 +9,12 @@ function initTable() {
             [{
                 field: 'state',
                 checkbox: true,
-                rowspan: 2,
                 align: 'center',
                 valign: 'middle'
             }, {
                 title: 'Issue ID',
                 field: 'iss_id',
-                rowspan: 2,
                 align: 'center',
-                valign: 'middle',
                 sortable: true,
             }, {
                 title: 'Assigned Tech',
@@ -36,7 +33,6 @@ function initTable() {
                 field: 'iss_type',
                 sortable: true,
                 editable: true,
-                colspan: 3,
                 align: 'center'
             },
             {
