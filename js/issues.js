@@ -88,7 +88,14 @@ function initTable() {
     $table.on('editable-save.bs.table', function(field, row, newvalue, oldvalue) {
 
         var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/updateIssue/'+ newvalue.iss_id;
-        axios.post(url, {
+        axios.put(url, {
+            iss_type: '',
+            building_id: '',
+            room_num: '',
+            cust_ucid: '',
+            iss_description: '',
+            front_desk_tech: '',
+            tech_ucid: '',
             status: newvalue.status
         }, {
             headers: {
