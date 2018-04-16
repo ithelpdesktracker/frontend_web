@@ -86,16 +86,16 @@ function initTable() {
         console.log(name, args);
     });
     $table.on('editable-save.bs.table', function(field, row, newvalue, oldvalue) {
-
+        console.log(sessionStorage['token']);
         var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/updateIssue/'+ newvalue.iss_id;
         axios.patch(url, {
-            iss_type: '',
-            building_id: '',
-            room_num: '',
-            cust_ucid: '',
-            iss_description: '',
-            front_desk_tech: '',
-            tech_ucid: '',
+            iss_type: newvalue.iss_type,
+            building_id: newvalue.building_id,
+            room_num: newvalue.room_num,
+            cust_ucid: newvalue.cust_ucid,
+            iss_description: newvalue.iss_description,
+            front_desk_tech: newvalue.front_desk_tech,
+            tech_ucid: newvalue.tech_ucid,
             status: newvalue.status
         }, {
             headers: {
