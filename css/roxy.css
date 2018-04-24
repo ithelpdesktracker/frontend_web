@@ -1,0 +1,17 @@
+input.transparent-input {
+    border:none !important
+}
+
+.transparent-input {
+   background-color: rgba(0, 0, 0, 0);
+   border:none;
+}
+
+ input.transparent-input{
+       background-color:rgba(0,0,0,0) !important;
+       border:none !important;
+    }
+    #tickets-pending {
+
+    color:black
+    }
