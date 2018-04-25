@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
 </head>
 <body class="sidebar-fixed header-fixed">
 <div class="page-wrapper">
@@ -16,9 +24,7 @@
             <i class="fa fa-bars"></i>
         </a>
 
-      <!--  <a class="navbar-brand" href="#">
-            <img src="./imgs/logo.png" alt="logo">
-        </a>-->
+
 
 
         <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
@@ -32,7 +38,7 @@
         <div class="sidebar">
             <nav class="sidebar-nav">
                 <ul class="nav">
-                    <li class="nav-title"> Admin Dash Plus Navigation</li>
+                    <li class="nav-title">Admin Dashboard Plus</li>
 
                     <li class="nav-item">
                         <a href="/dashboard" class="nav-link">
@@ -53,7 +59,7 @@
 
 
 
-                    <li class="nav-item n">
+                    <li class="nav-item ">
                         <a href="/statistics" class="nav-link ">
                             <i class="fas fa-chart-line"></i> Statistics </i>
                         </a>
@@ -97,7 +103,7 @@
                             <div class="col-md-4">
                               <div class="form-group">
                                   <label for="placeholder-input" class="form-control-label">UCID</label>
-                                  <input id="placeholder-input" class="form-control" placeholder="Enter UCID">
+                                  <input id="placeholder-input" class="form-control" name="admin_ucid" placeholder="Enter UCID">
                               </div>
                           </div>
 
@@ -106,14 +112,14 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="placeholder-input" class="form-control-label">First Name</label>
-                                  <input id="placeholder-input" class="form-control" placeholder="Enter First Name">
+                                  <input id="placeholder-input" class="form-control" name="admin_fn" placeholder="Enter First Name">
                                 </div>
                             </div>
 
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="placeholder-input" class="form-control-label">Last Name</label>
-                                  <input id="placeholder-input" class="form-control" placeholder="Enter Last Name">
+                                  <input id="placeholder-input" class="form-control" name="admin_ln" placeholder="Enter Last Name">
                                 </div>
                             </div>
                         </div>
@@ -122,7 +128,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="placeholder-input" class="form-control-label">Email (NJIT Email)</label>
-                                    <input id="placeholder-input" class="form-control" placeholder="email@njit.edu">
+                                    <input id="placeholder-input" class="form-control"name="admin_email" placeholder="email@njit.edu">
                                 </div>
                             </div>
 
@@ -131,7 +137,7 @@
 
                                 <div class="form-group">
                                     <label for="multi-select">User Type:</label>
-                                    <select id="multi-select" class="form-control" multiple="">
+                                    <select id="multi-select" name="admin_user_type" class="form-control" multiple="">
                                         <option>Admin</option>
                                         <option>Tech</option>
                                         <option>Staff</option>
