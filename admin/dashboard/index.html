@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MTSS -Statistics</title>
+
+    <link rel="icon" href="/imgs/question.png">
+    <link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/roxy.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
+</head>
+
+<body class="sidebar-fixed header-fixed">
+    <div class="page-wrapper">
+        <nav class="navbar page-header">
+            <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+                <i class="fa fa-bars"></i>
+            </a>
+
+
+        </nav>
+        <!-- Sidebar Settings -->
+        <div class="main-container">
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-title">MTSS - Admin Navigation</li>
+
+                        <li class="nav-item">
+                            <a href="/admin/dashboard" class="nav-link">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/admin/newissue" class="nav-link">
+                                <i class="fas fa-plus"></i> New Issue
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="/admin/issues" class="nav-link active">
+                                <i class="fas fa-address-card"></i> Issues
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/admin/settings" class="nav-link">
+                                <i class="fas fa-wrench"></i>Settings
+                            </a>
+                        </li>
+
+                        <li class="nav-title">More</li>
+
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link" id="logout">
+                                <i class="fa fa-lock"></i> Logout
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Here goes the Settings/Create_User_Page-->
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-3">
+                                <div class="card p-4">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+
+                                        <div>
+                                            <input class="h4 d-block font-weight-normal mb-2" name="tickets-pending" id="tickets-pending"
+                                                placeholder="400" style="background-color:rgba(0,0,0,0) !important;border:none !important;box-shadow:none !important;"
+                                                required onfocus="this.blur();" disabled>
+
+                                            <span>Unresolved Issues</span>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-130">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            <span>Chart</span>
+                                        </div>
+
+
+                                        <div>
+                                            <center>Library goes in here</center>
+                                        </div>
+                                        <div>
+                                            <center>Library goes in here</center>
+                                        </div>
+                                        <div>
+                                            <center>Library goes in here</center>
+                                        </div>
+                                        <div>
+                                            <center>Library goes in here</center>
+                                        </div>
+                                        <div>
+                                            <center>Library goes in here</center>
+                                        </div>
+                                        <div class="card-body">
+                                            <canvas id="bar-chart" width="100%" height="50"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/popper.js/popper.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap2.min.js"></script>
+    <script src="/js/carbon.js"></script>
+</body>
+
+</html>

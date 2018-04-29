@@ -78,6 +78,42 @@ $("#logout").click(function (event) {
     window.location.replace("/");
 });
 
+$("#new_user").click(function (event) {
+    event.preventDefault();
+    var ucid = $('.ucid_c').val(),
+        fname = $('.fname_c').val(),
+        lname = $('.lname_c').val(),
+        email = $('.email_c').val(),
+        type = $('.usertype_c').val(),
+        url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/userLogin";
+    axios.post(url, {
+        email: email,
+        password: password
+    }, {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+        })
+        .then(function (response) {
+            sessionStorage['token'] = response.data.success.api_token;
+            sessionStorage['ucid'] = response.data.success.ucid;
+            sessionStorage['job_title'] = response.data.success.job_title;
+            console.log(sessionStorage['token']);
+            console.log(response);
+            console.log(sessionStorage['job_title']);
+            /*if(sessionStorage['job_title'] === "admin") {
+                window.location.replace("adminplus.html");
+            } else {*/
+            window.location.replace("/newissue");
+            //}
+        })
+        .catch(function (error) {
+            if (error.response.status === 401) {
+                $("#login-failure").show();
+            }
+        });
+});
+
 function getIssues() {
     url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/Issue";
 
