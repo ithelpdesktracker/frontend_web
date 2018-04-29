@@ -18,11 +18,11 @@ $("#login").submit(function (event) {
             console.log(sessionStorage['token']);
             console.log(response);
             console.log(sessionStorage['job_title']);
-            /*if(sessionStorage['job_title'] === "admin") {
-                window.location.replace("adminplus.html");
-            } else {*/
-            window.location.replace("/newissue");
-            //}
+            if(sessionStorage['job_title'] === "admin" | sessionStorage['job_title'] === "staff") {
+                window.location.replace("/admin/dashboard");
+            } else {
+            window.location.replace("/u/newissue");
+            }
         })
         .catch(function (error) {
             if (error.response.status === 401) {
