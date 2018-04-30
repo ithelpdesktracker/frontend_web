@@ -43,13 +43,13 @@ $("#iss_creation").click(function (event) {
         url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue";
 
     axios.post(url, {
-            iss_type: iss_type[0],
-            building_id: building[0],
+            iss_type: iss_type,
+            building_id: building,
             room_num: room,
             cust_ucid: c_ucid,
             iss_description: iss_descr,
             front_desk_tech: loggedin,
-            tech_ucid: tech[0],
+            tech_ucid: tech,
             status: "open"
         }, {
             headers: {
