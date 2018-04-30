@@ -219,7 +219,7 @@ text {
                 bottom: (parseInt(d3.select('body').style('width'), 10) / 5),
                 left: (parseInt(d3.select('body').style('width'), 10) / 20)
             },
-            width = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right,
+            width = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right - 1000,
             height = parseInt(d3.select('body').style('height'), 10) - margin.top - margin.bottom;
 
         var x0 = d3.scale.ordinal()
@@ -247,7 +247,7 @@ text {
 
 
         var svg = d3.select("#Dash").append("svg")
-            .attr("width", width + margin.left + margin.right - 540)
+            .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
