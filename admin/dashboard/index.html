@@ -236,7 +236,7 @@
         x0.domain(categoriesNames);
         x1.domain(rateNames).rangeRoundBands([0, x0.rangeBand()]);
         y.domain([0, d3.max(data, function (tech) {
-            return d3.max(tech., function (d) {
+            return d3.max(tech, function (d) {
                 return d.value;
             });
         })]);
