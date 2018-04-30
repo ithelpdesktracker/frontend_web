@@ -41,7 +41,12 @@ $("#iss_creation").click(function (event) {
         tech = $("#tech").val(),
         loggedin = sessionStorage['ucid'],
         url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue";
-
+    console.log(c_ucid);
+    console.log(building);
+    console.log(room);
+    console.log(iss_descr);
+    console.log(tech);
+    console.log(iss_type);
     axios.post(url, {
             iss_type: iss_type,
             building_id: building,
@@ -50,7 +55,7 @@ $("#iss_creation").click(function (event) {
             iss_description: iss_descr,
             front_desk_tech: loggedin,
             tech_ucid: tech,
-            status: "open"
+            status: "unresolved"
         }, {
             headers: {
                 'Content-Type': 'application/json',
