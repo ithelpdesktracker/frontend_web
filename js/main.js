@@ -33,12 +33,12 @@ $("#login").submit(function (event) {
 
 $("#iss_creation").click(function (event) {
     event.preventDefault();
-    var c_ucid = $("#cust_ucid").val(),
-        building = $("#building").val(),
-        room = $("#room").val(),
-        iss_descr = $("#iss_desc").val(),
-        iss_type = $("#iss_type").val(),
-        tech = $("#tech").val(),
+    var c_ucid = $(".cust_ucid").val(),
+        building = $(".building").val(),
+        room = $(".room").val(),
+        iss_descr = $(".iss_desc").val(),
+        iss_type = $(".iss_type").val(),
+        tech = $(".tech").val(),
         loggedin = sessionStorage['ucid'],
         url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue";
     console.log(c_ucid);
