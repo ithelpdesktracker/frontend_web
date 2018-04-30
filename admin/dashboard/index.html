@@ -134,7 +134,7 @@
         axios.get(url)
         .then(function (response) {
             console.log(response);
-            $("#tickets-pending").attr('placeholder', response[0].Total_Unresolved);
+            $("#tickets-pending").attr('placeholder', response.data[0][0].Total_Unresolved);
         })
         .catch(function (error) {
             
