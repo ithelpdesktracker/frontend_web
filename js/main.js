@@ -4,12 +4,12 @@ $("#login").submit(function (event) {
         password = $("#password").val(),
         url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/userLogin";
     axios.post(url, {
-        email: email,
-        password: password
-    }, {
-        headers: {
-            'Content-Type': 'application/json',
-        }
+            email: email,
+            password: password
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
         .then(function (response) {
             sessionStorage['token'] = response.data.success.api_token;
@@ -18,10 +18,10 @@ $("#login").submit(function (event) {
             console.log(sessionStorage['token']);
             console.log(response);
             console.log(sessionStorage['job_title']);
-            if(sessionStorage['job_title'] === "admin" | sessionStorage['job_title'] === "staff") {
+            if (sessionStorage['job_title'] === "admin" | sessionStorage['job_title'] === "staff") {
                 window.location.replace("/admin/dashboard");
             } else {
-            window.location.replace("/u/newissue");
+                window.location.replace("/u/newissue");
             }
         })
         .catch(function (error) {
@@ -31,7 +31,7 @@ $("#login").submit(function (event) {
         });
 });
 
-$("#iss_creation").submit(function (event) {
+$("#iss_creation").click(function (event) {
     event.preventDefault();
     var c_ucid = $("#cust_ucid").val(),
         building = $("#building").val(),
@@ -43,30 +43,38 @@ $("#iss_creation").submit(function (event) {
         url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue";
 
     axios.post(url, {
-        iss_type: iss_type[0],
-        building_id: building[0],
-        room_num: room,
-        cust_ucid: c_ucid,
-        iss_description: iss_descr,
-        front_desk_tech: loggedin,
-        tech_ucid: tech[0],
-        status: "open"
-    }, {
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + sessionStorage['token'],
-        }
+            iss_type: iss_type[0],
+            building_id: building[0],
+            room_num: room,
+            cust_ucid: c_ucid,
+            iss_description: iss_descr,
+            front_desk_tech: loggedin,
+            tech_ucid: tech[0],
+            status: "open"
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + sessionStorage['token'],
+            }
         })
         .then(function (response) {
             document.getElementById("iss_creation").reset();
             $("#form-success").show();
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-            setTimeout(function () { $("#form-success").hide(); }, 8000);
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            setTimeout(function () {
+                $("#form-success").hide();
+            }, 8000);
         })
         .catch(function (error) {
             $("#form-failure").show();
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-            setTimeout(function () { $("#form-failure").hide(); }, 8000);
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+            setTimeout(function () {
+                $("#form-failure").hide();
+            }, 8000);
 
         });
 });
@@ -88,38 +96,41 @@ $("#new_user").click(function (event) {
         c_password = $('.c_password_c').val(),
         url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/userRegister";
     axios.post(url, {
-        ucid: ucid,
-        name: name,
-        email: email,
-        password: password,
-        c_password: c_password,
-        job_title: job_title
-    }, {
-        headers: {
-            'Content-Type': 'application/json',
-        }
+            ucid: ucid,
+            name: name,
+            email: email,
+            password: password,
+            c_password: c_password,
+            job_title: job_title
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
         .then(function (response) {
             console.log('User Created');
             $("#register-success").show();
-            setTimeout(function () { $("#register-success").hide(); }, 8000);
+            setTimeout(function () {
+                $("#register-success").hide();
+            }, 8000);
         })
         .catch(function (error) {
             console.log("Error");
             $("#register-failure").show();
-            setTimeout(function () { $("#register-failure").hide(); }, 8000);
+            setTimeout(function () {
+                $("#register-failure").hide();
+            }, 8000);
         });
 });
 
 function getIssues() {
     url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/Issue";
 
-    axios.get(url, {
-    }, {
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + sessionStorage['token'],
-        }
+    axios.get(url, {}, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + sessionStorage['token'],
+            }
         })
         .then(function (response) {
             $('#table').bootstrapTable({
