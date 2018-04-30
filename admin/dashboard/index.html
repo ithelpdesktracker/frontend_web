@@ -132,13 +132,23 @@
     <script>
         var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/unresolved';
         axios.get(url)
-        .then(function (response) {
-            console.log(response);
-            $("#tickets-pending").attr('placeholder', response.data[0][0].Total_Unresolved);
-        })
-        .catch(function (error) {
-            
-        });
+            .then(function (response) {
+                console.log(response);
+                $("#tickets-pending").attr('placeholder', response.data[0][0].Total_Unresolved);
+                setInterval(function () {
+                    axios.get(url)
+                        .then(function (response) {
+                            console.log(response);
+                            $("#tickets-pending").attr('placeholder', response.data[0][0].Total_Unresolved);
+                        })
+                        .catch(function (error) {
+
+                        });
+                }, 60000);
+            })
+            .catch(function (error) {
+
+            });
     </script>
     <script>
         $(document).ready(function () {
