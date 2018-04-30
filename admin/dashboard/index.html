@@ -130,14 +130,8 @@
     <script src="/js/carbon.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script>
-        var margin = {
-                top: (parseInt(d3.select('#Dash').style('width'), 10) / 10),
-                right: (parseInt(d3.select('#Dash').style('width'), 10) / 20),
-                bottom: (parseInt(d3.select('#Dash').style('width'), 10) / 5),
-                left: (parseInt(d3.select('#Dash').style('width'), 10) / 20)
-            },
-            width = parseInt(d3.select('#Dash').style('width'), 10) - margin.left - margin.right,
-            height = parseInt(d3.select('#Dash').style('height'), 10) - margin.top - margin.bottom;
+        var width = 600;
+        var height = 400;
 
         var x0 = d3.scale.ordinal()
             .rangeRoundBands([0, width], .1);
