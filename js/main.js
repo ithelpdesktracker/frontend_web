@@ -81,36 +81,33 @@ $("#logout").click(function (event) {
 $("#new_user").click(function (event) {
     event.preventDefault();
     var ucid = $('.ucid_c').val(),
-        fname = $('.fname_c').val(),
-        lname = $('.lname_c').val(),
+        name = $('.fname_c').val() + " " + $('.lname_c').val(),
         email = $('.email_c').val(),
-        type = $('.usertype_c').val(),
-        url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/userLogin";
+        job_title = $('.usertype_c').val(),
+        password = $('.password_c').val(),
+        c_password = $('.c_password_c').val(),
+        url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/userRegister";
     axios.post(url, {
+        ucid: ucid,
+        name: name,
         email: email,
-        password: password
+        password: password,
+        c_password: c_password,
+        job_title: job_title
     }, {
         headers: {
             'Content-Type': 'application/json',
         }
         })
         .then(function (response) {
-            sessionStorage['token'] = response.data.success.api_token;
-            sessionStorage['ucid'] = response.data.success.ucid;
-            sessionStorage['job_title'] = response.data.success.job_title;
-            console.log(sessionStorage['token']);
-            console.log(response);
-            console.log(sessionStorage['job_title']);
-            /*if(sessionStorage['job_title'] === "admin") {
-                window.location.replace("adminplus.html");
-            } else {*/
-            window.location.replace("/newissue");
-            //}
+            console.log('User Created');
+            $("#register-success").show();
+            setTimeout(function () { $("#register-success").hide(); }, 8000);
         })
         .catch(function (error) {
-            if (error.response.status === 401) {
-                $("#login-failure").show();
-            }
+            console.log("Error");
+            $("#register-failure").show();
+            setTimeout(function () { $("#register-failure").hide(); }, 8000);
         });
 });
 

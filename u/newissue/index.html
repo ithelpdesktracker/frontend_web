@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MTSS - New Issue</title>
 
-    <link rel="icon" href="./imgs/question.png">
-    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="/imgs/question.png">
+    <link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <link rel="stylesheet" type="text/css" href="/css/util.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -92,29 +92,32 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="normal-input" class="form-control-label">UCID</label>
-                                                <input id="normal-input" name="ucid" placeholder="Customer UCID" class="form-control" autocomplete="off">
+                                                <input id="normal-input" name="ucid" placeholder="Customer UCID" class="form-control" autocomplete="off" id="cust_ucid">
                                             </div>
                                         </div>
 
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="multi-select">Issue Location:</label>
-                                                <select id="multi-select" name="choice" class="form-control">
-                                                    <option value="a">Campbell Hall</option>
-                                                    <option value="b">Central Avenue Building</option>
-                                                    <option value="c">Cullimore Hall</option>
-                                                    <option value="d">Electrical and Computer Engineering Building</option>
-                                                    <option value="e">Fenster Hall</option>
-                                                    <option value="f">Faculty Memorial Hall</option>
-                                                    <option value="g">Guttenberg Information Technologies Center</option>
-                                                    <option value="h">Kupfrian Hall</option>
-                                                    <option value="i">Microelectronics Center</option>
-                                                    <option value="j">Mechanical Engineering Center</option>
-                                                    <option value="k">School of Architecture</option>
-                                                    <option value="l">Tiernan Hall</option>
-                                                    <option value="m">Van Houten Library</option>
-                                                    <option value="n">York Center for Environmental Engineering And Science</option>
-                                                    <option value="o">Specht Building</option>
+                                                <select id="multi-select" name="choice" class="form-control" id="building">
+                                                    <option value="1">Kupfrian Hall</option>
+                                                    <option value="2">GITC - Guttenberg Information Technologies Center</option>
+                                                    <option value="3">Tiernan Hall</option>
+                                                    <option value="4">Campus Center</option>
+                                                    <option value="5">Weston Hall</option>
+                                                    <option value="6">Central King Building</option>
+                                                    <option value="7">Cullimore Hall</option>
+                                                    <option value="8">Wellness and Event Center</option>
+                                                    <option value="9">Electrical and Computer Engineering Building</option>
+                                                    <option value="10">Fenster Hall</option>
+                                                    <option value="11">Faculty Memorial Hall</option>
+                                                    <option value="12">Microelectronics Center</option>
+                                                    <option value="13">Mechanical Engineering Center</option>
+                                                    <option value="14">Central Avenue Building</option>
+                                                    <option value="15">Van Houten Library</option>
+                                                    <option value="16">York Center for Environmental Engineering and Science</option>
+                                                    <option value="17">Specht Building</option>
+                                                    <option value="18">Campbell Hall</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -123,19 +126,19 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="normal-input" class="form-control-label">Room #</label>
-                                                <input id="normal-input" name="room" placeholder="Room #" class="form-control" autocomplete="off">
+                                                <input id="normal-input" name="room" placeholder="Room #" class="form-control" autocomplete="off" id="room">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="multi-select">Issue Type:</label>
-                                                <select id="multi-select" name="choice2" class="form-control" multiple="">
-                                                    <option value="p">Classroom - Audio</option>
-                                                    <option value="q">Classroom - Video</option>
-                                                    <option value="r">Classroom - Delivery</option>
-                                                    <option value="s">Classroom - Other</option>
-                                                    <option value="t">Special Event</option>
-                                                    <option value="u">Other</option>
+                                                <select id="multi-select" name="choice2" class="form-control" multiple="" id="iss_type">
+                                                    <option value="ca">Classroom - Audio</option>
+                                                    <option value="cv">Classroom - Video</option>
+                                                    <option value="cd">Classroom - Delivery</option>
+                                                    <option value="co">Classroom - Other</option>
+                                                    <option value="se">Special Event</option>
+                                                    <option value="o">Other</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -143,25 +146,26 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="textarea">Issue Description:</label>
-                                                <textarea id="textarea" name="txtarea" class="form-control" rows="6"></textarea>
+                                                <textarea id="textarea" name="txtarea" class="form-control" rows="6" id="iss_desc"></textarea>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="multi-select">Assign a Tech:</label>
-                                                <select id="multi-select" name="choice3" class="form-control" multiple="">
-                                                    <option value="v">John Cummings</option>
-                                                    <option value="w">Jack Bauer</option>
-                                                    <option value="x">Yoel Romero</option>
-                                                    <option value="y">Joey Diaz</option>
-                                                    <option value="z">Tommy Wright</option>
-                                                    <option value="1">Moe Abdel</option>
-                                                    <option value="2">Eddie Bravo</option>
-                                                    <option value="3">Benny Chicas</option>
-                                                    <option value="4">Luigi Fabrizio</option>
-                                                    <option value="5">Tony Montana</option>
-                                                    <option value="6">Son Goku</option>
+                                                <select id="multi-select" name="choice3" class="form-control" multiple="" id="tech">
+                                                    <option value="jic6">John Cummings</option>
+                                                    <option value="vcc3">Victor Cornejo</option>
+                                                    <option value="jb2">Jack Bauer</option>
+                                                    <option value="yr2">Yoel Romero</option>
+                                                    <option value="jd3">Joey Diaz</option>
+                                                    <option value="tw3">Tommy Wright</option>
+                                                    <option value="ma1">Moe Abdel</option>
+                                                    <option value="ed3">Eddie Bravo</option>
+                                                    <option value="bc3">Benny Chicas</option>
+                                                    <option value="lf5">Luigi Fabrizio</option>
+                                                    <option value="tm3">Tony Montana</option>
+                                                    <option value="sg2">Son Goku</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -175,7 +179,6 @@
                                     </center>
                                 </div>
 
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -188,11 +191,11 @@
 
 
 
-    <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/popper.js/popper.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap2.min.js"></script>
-    <script src="./js/carbon.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/popper.js/popper.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap2.min.js"></script>
+    <script src="/js/carbon.js"></script>
 </body>
 
 </html>
