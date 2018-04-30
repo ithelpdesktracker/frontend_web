@@ -256,7 +256,7 @@
             .enter().append("g")
             .attr("class", "rect")
             .attr("transform", function (d) {
-                return "translate(" + x0(d.label) + ",0)";
+                return "translate(" + x0(d.tech_ucid) + ",0)";
             });
 
         bar.selectAll("rect")
