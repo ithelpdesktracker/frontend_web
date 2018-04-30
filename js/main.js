@@ -41,20 +41,15 @@ $("#iss_creation").click(function (event) {
         tech = $(".tech").val(),
         loggedin = sessionStorage['ucid'],
         url = "http://ec2-52-91-175-30.compute-1.amazonaws.com/api/addIssue";
-    console.log(c_ucid);
-    console.log(building);
-    console.log(room);
-    console.log(iss_descr);
-    console.log(tech);
-    console.log(iss_type);
+
     axios.post(url, {
-            iss_type: iss_type,
+            iss_type: iss_type[0],
             building_id: building,
             room_num: room,
             cust_ucid: c_ucid,
             iss_description: iss_descr,
             front_desk_tech: loggedin,
-            tech_ucid: tech,
+            tech_ucid: tech[0],
             status: "unresolved"
         }, {
             headers: {
@@ -63,7 +58,7 @@ $("#iss_creation").click(function (event) {
             }
         })
         .then(function (response) {
-            document.getElementById("iss_creation").reset();
+            $('input').val('');
             $("#form-success").show();
             $("html, body").animate({
                 scrollTop: 0
