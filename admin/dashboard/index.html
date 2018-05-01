@@ -270,9 +270,6 @@
                     var svg = selection.append('svg')
                         .attr('width', width + margin.left + margin.right)
                         .attr('height', height + margin.top + margin.bottom)
-                        .attr("preserveAspectRatio", "xMinYMin meet")
-                        .attr("viewBox", "0 0 300 300")
-                        .classed("svg-content", true)
                         .append('g')
                         .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
                     // ===========================================================================================
@@ -480,8 +477,8 @@
                     }
                 }
                 var donut = donutChart()
-                    .width(960)
-                    .height(500)
+                    .width(500)
+                    .height(350)
                     .cornerRadius(3) // sets how rounded the corners are on each slice
                     .padAngle(0.015) // effectively dictates the gap between slices
                     .variable('value')
