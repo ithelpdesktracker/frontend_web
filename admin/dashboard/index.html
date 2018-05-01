@@ -262,14 +262,14 @@
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+        var dataset = null;
         axios.get('http://ec2-52-91-175-30.compute-1.amazonaws.com/api/dashOne', {}, {
             headers: {
                 'Content-Type': 'application/json',
             }
         })
         .then(function (response) {
-            var dataset = response.data[0];
+            dataset = response.data[0];
         })
         .catch(function (error) {
             console.log(error);
