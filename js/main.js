@@ -50,7 +50,7 @@ $("#iss_creation").click(function (event) {
             iss_description: iss_descr,
             front_desk_tech: loggedin,
             tech_ucid: tech[0],
-            status: "unresolved"
+            status: "open"
         }, {
             headers: {
                 'Content-Type': 'application/json',
