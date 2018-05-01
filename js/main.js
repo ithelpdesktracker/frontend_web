@@ -106,6 +106,7 @@ $("#new_user").click(function (event) {
         }, {
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + sessionStorage['token'],
             }
         })
         .then(function (response) {
