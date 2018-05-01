@@ -270,6 +270,9 @@
                     var svg = selection.append('svg')
                         .attr('width', width + margin.left + margin.right)
                         .attr('height', height + margin.top + margin.bottom)
+                        .attr("preserveAspectRatio", "xMinYMin meet")
+                        .attr("viewBox", "0 0 300 300")
+                        .classed("svg-content", true)
                         .append('g')
                         .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
                     // ===========================================================================================
@@ -299,7 +302,7 @@
                         .attr('dy', '.35em')
                         .html(function (d) {
                             // add "key: value" for given category. Number inside tspan is bolded in stylesheet.
-                            return d.data[category] + ': <tspan>' + percentFormat(d.data[variable]) + '</tspan>';
+                            return d.data[category] + ': <tspan>' + d.data[variable] + '</tspan>';
                         })
                         .attr('transform', function (d) {
 
@@ -380,7 +383,7 @@
                         for (var key in data.data) {
 
                             // if value is a number, format it as a percentage
-                            var value = (!isNaN(parseFloat(data.data[key]))) ? percentFormat(data.data[key]) : data.data[key];
+                            var value = (!isNaN(parseFloat(data.data[key]))) ? data.data[key] : data.data[key];
 
                             // leave off 'dy' attr for first tspan so the 'dy' attr on text element works. The 'dy' attr on
                             // tspan effectively imitates a line break.
