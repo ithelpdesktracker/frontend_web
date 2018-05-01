@@ -218,7 +218,7 @@
         var url = 'http://ec2-52-91-175-30.compute-1.amazonaws.com/api/unresolved';
         axios.get(url)
             .then(function (response) {
-                $("#tickets-pending").attr('placeholder', response.data[0][0].Total_Unresolved);
+                $("#tickets-pending").attr('placeholder', response.data[0].Total_Unresolved);
             })
             .catch(function (error) {
 
