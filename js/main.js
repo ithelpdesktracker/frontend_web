@@ -102,7 +102,7 @@ $("#new_user").click(function (event) {
             email: email,
             password: password,
             c_password: c_password,
-            job_title: job_title
+            job_title: job_title[0]
         }, {
             headers: {
                 'Content-Type': 'application/json',
