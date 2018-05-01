@@ -54,6 +54,7 @@ $("#iss_creation").click(function (event) {
         }, {
             headers: {
                 'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
                 'Authorization': 'Bearer ' + sessionStorage['token'],
             }
         })
