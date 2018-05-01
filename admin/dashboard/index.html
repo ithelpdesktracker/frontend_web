@@ -263,8 +263,18 @@
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-
-        dataset = [{
+        axios.get('http://ec2-52-91-175-30.compute-1.amazonaws.com/api/dashOne', {}, {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(function (response) {
+            var dataset = response.data[0];
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+        /*var dataset = [{
             "tech_ucid": "amm87",
             "open": "0",
             "resolved": "2",
@@ -304,7 +314,7 @@
             "open": "1",
             "resolved": "0",
             "unresolved": "0"
-        }];
+        }];*/
 
 
         var options = d3.keys(dataset[0]).filter(function (key) {
